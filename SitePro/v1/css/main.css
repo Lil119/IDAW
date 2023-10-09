@@ -39,5 +39,6 @@ footer {
 }
 
 #currentpage {
-    background-color: rgb(188, 220, 248);
+    background-color: rgb(211, 99, 52);
+    text-decoration: underline;
 }

@@ -1,0 +1,19 @@
+.menu {
+    color: blue;
+}
+
+.contenu {
+    font-size: 20px;
+}
+
+.sousbox {
+    margin: 20px;
+}
+
+.box {
+    display: flex
+}
+
+#currentpage {
+    background-color: rgb(188, 220, 248);
+}

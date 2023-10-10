@@ -4,7 +4,7 @@ function renderMenuToHTML($currentPageId)
     // un tableau qui d\'efinit la structure du site
     $mymenu = array(
         // idPage titre
-        'index' => array('Accueil'),
+        'accueil' => array('Accueil'),
         'cv' => array('Cv'),
         'projets' => array('Mes Projets')
     );
@@ -17,9 +17,9 @@ function renderMenuToHTML($currentPageId)
         <ul class="navbar-nav">';
     foreach ($mymenu as $pageId => $pageParameters) {
         if ($pageId == $currentPageId) {
-            echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" id="currentpage" href="' . $pageId . '.php">' . $pageParameters[0] . '</a></li>';
+            echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" id="currentpage" href="index.php?page=' . $pageId . '">' . $pageParameters[0] . '</a></li>';
         } else {
-            echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="' . $pageId . '.php">' . $pageParameters[0] . '</a></li>';
+            echo '<li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=' . $pageId . '">' . $pageParameters[0] . '</a></li>';
         }
     }
     echo '</ul>

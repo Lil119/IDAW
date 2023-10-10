@@ -7,12 +7,9 @@ if (isset($_GET['page'])) {
 }
 ?>
 
-<header class="bandeau_haut">
-    <h1 class="titre">Hector Durand</h1>
-</header>
 
 <?php
-renderMenuToHTML('index');
+renderMenuToHTML($currentPageId);
 ?>
 
 <section class="corps">

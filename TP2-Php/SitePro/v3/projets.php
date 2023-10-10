@@ -1,15 +1,8 @@
-<?php
-require_once('template_header.php');
-?>
 <header>
     <h1>Projets</h1>
 </header>
 
 <div class="box">
-    <?php
-    require_once('template_menu.php');
-    renderMenuToHTML('projets');
-    ?>
 
     <div class="contenu sousbox">
         <section class="cadre-orange">
@@ -52,7 +45,3 @@ require_once('template_header.php');
         </section>
     </div>
 </div>
-
-<?php
-require_once('template_footer.php');
-?>

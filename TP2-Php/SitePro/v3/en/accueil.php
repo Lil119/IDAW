@@ -1,5 +1,5 @@
 <header>
-    <h1>Accueil</h1>
+    <h1>Accueil Anglais</h1>
 </header>
 
 <div class="box">

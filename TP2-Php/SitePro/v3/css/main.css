@@ -49,3 +49,13 @@ footer {
     background-color: rgb(211, 99, 52);
     text-decoration: underline;
 }
+
+.langue {
+    color: white;
+    text-decoration: none;
+}
+
+.langue:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}

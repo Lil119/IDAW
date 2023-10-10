@@ -13,7 +13,7 @@ if (isset($_GET['lang'])) {
 
 
 <?php
-renderMenuToHTML($currentPageId);
+renderMenuToHTML($currentPageId, $currentPageLang);
 ?>
 
 <section class="corps">

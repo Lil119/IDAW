@@ -15,7 +15,7 @@ function renderMenuToHTML($currentPageId, $currentPageLang)
         'accueil' => array('Accueil', 'Home'),
         'cv' => array('Cv', 'Cv'),
         'projets' => array('Mes Projets', 'Projects'),
-        'contact' => array('Mon Contact', 'Contacts')
+        'contact' => array('Mon Contact', 'Contact')
     );
     $taboppositelang = opposite_lang($currentPageLang);
 

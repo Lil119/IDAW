@@ -67,3 +67,7 @@ footer {
 .italique {
     font-style: italic;
 }
+
+.centre {
+    text-align: center;
+}

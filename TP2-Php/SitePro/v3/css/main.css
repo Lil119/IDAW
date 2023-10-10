@@ -1,0 +1,44 @@
+.menu {
+    font-size: 15px;
+}
+
+/*.contenu {
+    font-size: 20px;
+}*/
+
+header {
+    margin: 30px;
+    text-align: center;
+}
+
+footer {
+    margin: 30px
+}
+
+.cadre-orange {
+    background-color: #faeadd;
+    border-color: #fac396;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.cadre {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.sousbox {
+    margin: 20px;
+}
+
+.box {
+    display: flex
+}
+
+#currentpage {
+    background-color: rgb(211, 99, 52);
+    text-decoration: underline;
+}

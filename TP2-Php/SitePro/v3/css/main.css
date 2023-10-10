@@ -38,6 +38,13 @@ footer {
     display: flex
 }
 
+.contactbox {
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    margin-top: 100px;
+}
+
 #currentpage {
     background-color: rgb(211, 99, 52);
     text-decoration: underline;

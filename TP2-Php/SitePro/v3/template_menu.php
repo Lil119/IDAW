@@ -6,7 +6,8 @@ function renderMenuToHTML($currentPageId)
         // idPage titre
         'accueil' => array('Accueil'),
         'cv' => array('Cv'),
-        'projets' => array('Mes Projets')
+        'projets' => array('Mes Projets'),
+        'contact' => array('Mon Contact')
     );
     echo '<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">

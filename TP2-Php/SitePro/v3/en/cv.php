@@ -1,39 +1,37 @@
 <header>
-    <h1>CV Anglais</h1>
+    <h1>Resume</h1>
 </header>
 
-
 <div class="box">
-    <div class="contenu sousbox">
+    <div class="content subbox">
         <div class="cadre-orange">
-            <h4>Objectif:</h4>
+            <h4>Objective:</h4>
             <p>
-                Ingénieure informatique passionnée par les technologies émergentes, je suis à la recherche de défis
-                stimulants dans le domaine du développement logiciel. Mon objectif est de contribuer au monde
-                numérique
-                en
-                apportant mon expertise en conception et en développement de solutions innovantes.
+                Passionate computer engineer with a focus on emerging technologies, seeking stimulating challenges in the
+                field of software development. My goal is to contribute to the digital world by bringing my expertise in
+                designing and developing innovative solutions.
             </p>
         </div>
         <div class="cadre">
-            <h4 class="text-primary">Expérience Professionnelle:</h4>
+            <h4 class="text-primary">Professional Experience:</h4>
             <p>
-                Développeuse Full Stack - CyberSolutions Inc.
+                <span class="gras">Intern at the IT Department of CHRU de Nancy</span>
                 <br>
-                Conception et développement de solutions logicielles complètes, du front-end au back-end, en
-                utilisant
-                les
-                dernières technologies. Impliquée dans des projets de migration vers le cloud et d'intégration d'IA
-                pour
-                améliorer l'efficacité opérationnelle.
+                <span class="italique">May 15, 2023 - August 4, 2023 (3 months)</span>
+                <br><br>
+                Actively participated in drafting specifications in collaboration with clients.
+                <br>
+                Completed the development of a web application using PHP and JavaScript programming languages.
+                <br>
+                Wrote comprehensive documentation associated with the project.
             </p>
         </div>
         <div class="cadre-orange">
-            <h4>Compétences:</h4>
+            <h4>Skills:</h4>
             <p>
-                Langages de programmation: Python, JavaScript, Java, Php
-                <br> Développement Web: HTML, CSS
-                <br> Bases de données: SQL
+                Programming Languages: Python, JavaScript, Java, Spring, Php
+                <br> Web Development: HTML, CSS
+                <br> Databases: SQL
             </p>
         </div>
     </div>

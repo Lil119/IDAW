@@ -1,47 +1,57 @@
 <header>
-    <h1>Projets Anglais</h1>
+    <h1>Projects</h1>
 </header>
 
 <div class="box">
 
-    <div class="contenu sousbox">
+    <div class="content subbox">
         <section class="cadre-orange">
-            <h4>Plateforme d'Apprentissage Automatisé (Projet IA)</h4>
-            <p>En tant que développeuse Full Stack chez CyberSolutions Inc., j'ai dirigé une équipe pour concevoir
-                une plateforme d'apprentissage en ligne utilisant des algorithmes d'intelligence artificielle. Le
-                système personnalisait automatiquement le contenu éducatif en fonction des préférences
-                d'apprentissage des utilisateurs, en mettant en œuvre des modèles de machine learning.</p>
-        </section>
-
-        <section class="cadre">
-            <h4 class="text-primary">Migration vers le Cloud Intelligent</h4>
-            <p>J'ai été une force motrice dans un projet visant à migrer l'infrastructure logicielle de l'entreprise
-                vers le cloud. J'ai coordonné la migration des bases de données vers des solutions cloud, optimisant
-                ainsi les performances et la résilience du système tout en réduisant les coûts d'exploitation.</p>
-        </section>
-
-        <section class="cadre-orange">
-            <h4>Système de Gestion des Projets Open Source</h4>
-            <p>En tant que membre active de la communauté des développeurs Open Source, j'ai initié un projet de
-                développement collaboratif d'une plateforme de gestion de projets spécialement conçue pour les
-                projets Open Source. Cette application centralisée a simplifié la coordination entre les
-                contributeurs, favorisant ainsi une collaboration plus efficace.</p>
-        </section>
-
-        <section class="cadre">
-            <h4 class="text-primary">Chatbot Réactif pour Support Technique</h4>
-            <p>J'ai dirigé le développement d'un chatbot intelligent capable de fournir un support technique de
-                qualité. Ce chatbot utilisait des modèles de traitement du langage naturel et des algorithmes
-                d'apprentissage automatique pour comprendre les problèmes des utilisateurs et proposer des solutions
-                pertinentes.</p>
-        </section>
-
-        <section class="cadre-orange">
-            <h4>Jeu Éducatif sur les Langages de Programmation</h4>
-            <p>Passionnée par l'éducation en informatique, j'ai créé un jeu éducatif en ligne visant à enseigner de
-                manière ludique les concepts de base des langages de programmation. Le jeu a été conçu pour les
-                débutants et utilisait des scénarios interactifs pour rendre l'apprentissage agréable et accessible.
+            <h4>TIPE Project</h4>
+            <p>For the TIPE project of the academic year 2021-2022, I undertook the design
+                of an experimental protocol to assess and compare the thermal resistance of
+                various materials. This project constituted a thorough exploration of the thermal
+                properties of materials, employing precise measurement techniques and specialized
+                experimental devices. The protocol design phase required a critical analysis of
+                factors influencing thermal resistance, as well as the judicious selection of
+                materials to include in the study. Following the experimental phase, results were
+                analyzed thoroughly, and significant conclusions were drawn. The 15-minute oral
+                presentation before a jury of teacher-researchers provided an opportunity to share
+                the methodologies, challenges faced, and major discoveries from this in-depth
+                scientific study. This project represented a stimulating opportunity to apply
+                theoretical knowledge to practical situations while honing my skills in scientific
+                communication.
             </p>
+        </section>
+
+        <section class="cadre">
+            <h4 class="text-primary">Encouraging High School Girls Towards Engineering Schools Project</h4>
+            <p>My active participation in a project aimed at encouraging high school girls to
+                consider a career in engineering was a significant and rewarding experience. Through
+                interactive workshops and participation in educational forums, I had the opportunity
+                to share my passion for engineering, explain various domains, and demystify
+                stereotypes often associated with this profession. The goal was to inspire high
+                school girls to explore opportunities in the field of engineering and inform them
+                about the various branches of this discipline. Direct interaction with students
+                allowed me to answer their questions, share personal experiences, and emphasize the
+                importance of diversity in the engineering sector. This project also reinforced my
+                belief that education and awareness are powerful tools to encourage young talents to
+                consider enriching careers in science and engineering.</p>
+        </section>
+
+        <section class="cadre-orange">
+            <h4>Female Rugby in Action: Inter-School Tournament</h4>
+            <p>As the initiator of a female rugby team, I orchestrated the gathering of
+                passionate and determined players to participate in an inter-school tournament. The
+                goal was twofold: create an opportunity for women to express themselves in sports
+                while fostering an inclusive atmosphere within the world of rugby. Through dedicated
+                training coordination and encouragement for collaboration within the team, we formed a
+                united and motivated group. This project was much more than just participating in a
+                sports competition; it symbolized the desire to diversify the rugby landscape,
+                traditionally focused on male teams. The success of this endeavor highlighted the
+                ability of women to excel in rugby and contributed to promoting diversity in this
+                dynamic sport. The enthusiastic participation of our team in the inter-school
+                tournament was a declaration of autonomy, demonstrating that rugby is an accessible
+                and welcoming playing field for everyone.</p>
         </section>
     </div>
 </div>

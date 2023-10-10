@@ -18,20 +18,21 @@
         <div class="cadre">
             <h4 class="text-primary">Expérience Professionnelle:</h4>
             <p>
-                Développeuse Full Stack - CyberSolutions Inc.
+                <span class="gras">Stage au service informatique du CHRU de Nancy</span>
                 <br>
-                Conception et développement de solutions logicielles complètes, du front-end au back-end, en
-                utilisant
-                les
-                dernières technologies. Impliquée dans des projets de migration vers le cloud et d'intégration d'IA
-                pour
-                améliorer l'efficacité opérationnelle.
+                <span class="italique">15 mai 2023-4 août 2023 (3 mois)</span>
+                <br><br>
+                Participation active à la rédaction du cahier des charges en collaboration avec les clients.
+                <br>
+                Développement complet d'une application Web utilisant les langages de programmation PHP et JavaScript.
+                <br>
+                Rédaction exhaustive de la documentation associée au projet.
             </p>
         </div>
         <div class="cadre-orange">
             <h4>Compétences:</h4>
             <p>
-                Langages de programmation: Python, JavaScript, Java, Php
+                Langages de programmation: Python, JavaScript, Java, Spring, Php
                 <br> Développement Web: HTML, CSS
                 <br> Bases de données: SQL
             </p>

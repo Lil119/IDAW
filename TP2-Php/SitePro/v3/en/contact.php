@@ -1,5 +1,5 @@
 <header>
-    <h1>Contact Anglais</h1>
+    <h1>Contact</h1>
 </header>
 
 <div class="box contactbox">

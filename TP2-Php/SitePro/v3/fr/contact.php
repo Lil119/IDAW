@@ -6,7 +6,7 @@
 
     <section class="cadre-orange">
         <h4>Linkedin</h4>
-        <p>lien</p>
+        <a href="https://www.linkedin.com/in/lilou-petitcolas-lassalle-909564262/">https://www.linkedin.com/in/lilou-petitcolas-lassalle-909564262/</a>
     </section>
 
     <section class="cadre">

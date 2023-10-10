@@ -51,11 +51,19 @@ footer {
 }
 
 .langue {
-    color: white;
+    color: rgba(255, 255, 255, 0.696);
     text-decoration: none;
 }
 
 .langue:hover {
     text-decoration: underline;
-    color: #ffffff;
+    color: #ffffffe4;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.italique {
+    font-style: italic;
 }

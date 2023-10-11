@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <?php
 session_start();
 if (!isset($_SESSION['login'])) {
@@ -24,3 +26,5 @@ if (!isset($_SESSION['login'])) {
     echo "<br><a href=deconnexion.php>Se déconnecter</a>";
 }
 ?>
+
+</html>

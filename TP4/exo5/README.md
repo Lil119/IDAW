@@ -27,7 +27,7 @@ paths:
               example: {"id": 1}
         '400':
           description: Données incomplètes
-  /users/{userId}:
+  /users{userId}:
     parameters:
       - name: userId
         in: path

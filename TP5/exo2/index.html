@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
- <title>Users</title>
+    <title>Users</title>
     <style>
         body {
             margin-top: 5em;
@@ -36,7 +36,6 @@
         </tbody>
     </table>
     <form id="addStudentForm" action="" onsubmit="onFormSubmit();">
-        <input type="hidden" class="form-control" id="inputId">
         <div class="form-group row">
             <label for="inputNom" class="col-sm-2 col-form-label">Nom</label>
             <div class="col-sm-3">
@@ -57,15 +56,15 @@
         </div>
     </form>
 
-    <form>
     <div class="modal" id="myModal" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modification</h5>
-              <button type="button" class="btn-close" id="croix" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modification</h5>
+                    <button type="button" class="btn-close" id="croix" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
                     <div class="form-group row">
                         <label for="idModif" class="col-sm-3 col-form-label">Id</label>
                         <div class="col-sm-9">
@@ -84,87 +83,150 @@
                             <input type="text" class="form-control" id="emailModif" value=''>
                         </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="close" data-bs-dismiss="modal">Close</button>
+                    <input type="button" class="btn btn-primary" id="ValidModif" value="Valider">
+                </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" id="close" data-bs-dismiss="modal">Close</button>
-              <input type="submit" class="btn btn-primary" id="ValidModif" value="Valider">
-            </div>
-          </div>
         </div>
-      </div>
-    </form>
+    </div>
 
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script>
 
         var table = new DataTable('#myTable', {
-    //ajax: 'data/arrays.txt',
-    columnDefs: [
-    { data: "id", targets: 0 },
-        { data: "nom", targets: 1 },
-        { data: "email", targets: 2 },
-        {
-            data: "modifier",
-            defaultContent: '<input type="button" id="Modif" value="Modifier">',
-            targets: -2
-        },
-        {
-            data: null,
-            defaultContent: '<input type="button" id="Suppr" value="Supprimer">',
-            targets: -1
+            //ajax: 'data/arrays.txt',
+            columnDefs: [
+                { data: "id", targets: 0 },
+                { data: "nom", targets: 1 },
+                { data: "email", targets: 2 },
+                {
+                    data: "modifier",
+                    defaultContent: '<input type="button" id="Modif" value="Modifier">',
+                    targets: -2
+                },
+                {
+                    data: null,
+                    defaultContent: '<input type="button" id="Suppr" value="Supprimer">',
+                    targets: -1
+                }
+            ]
+        });
+
+        //Initialisation du tableau
+        $.ajax({
+            url: 'http://localhost/IDAW/TP4/exo5/users.php',
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                //console.log(data);
+
+                for (let i = 0; i < data.length; i++) {
+                    table.row.add({
+                        "id": data[i].id,
+                        "nom": data[i].name,
+                        "email": data[i].email
+                    }).draw();
+                }
+            },
+            error: function (error) {
+                console.error('Erreur lors de la récupération des données:', error);
+            }
+        })
+
+
+        //Gestion de la modification
+        table.on('click', '#Modif', function (e) {
+            let row = table.row(e.target.closest('tr'));
+
+            $("#nomModif").val(table.cell(row, 1).data());
+            $("#emailModif").val(table.cell(row, 2).data());
+            $("#idModif").val(table.cell(row, 0).data());
+
+            $('#myModal').modal('show');
+        });
+
+        function fermeModal() {
+            $('#myModal').modal('hide');
         }
-    ]
-});
- 
-table.on('click', '#Modif', function (e) {
-    let row = table.row(e.target.closest('tr'));
-    
-    $("#nomModif").val(table.cell(row,1).data());
-    $("#emailModif").val(table.cell(row,2).data());
-    $("#idModif").val(table.cell(row,0).data());
 
-    $('#myModal').modal('show');
-});
+        $('#close').on('click', function (e) {
+            fermeModal();
+        })
 
-$('#close').on('click',function(e){
-    $('#myModal').modal('hide');
-})
+        $('#croix').on('click', function (e) {
+            fermeModal();
+        })
 
-$('#croix').on('click',function(e){
-    $('#myModal').modal('hide');
-})
+        $('#ValidModif').on('click', function (e) {
 
-table.on('click', '#ValidModif', function (e) {
-    let row = table.row(e.target.closest('tr'));
-    row.data(
-        {
-    "id": table.cell(row,0).data(),
-    "nom": '<input type="text" id="nomModif" value='+table.cell(row,1).data()+'>',
-    "email": '<input type="text" id="emailModif" value='+table.cell(row,2).data()+'>',
-    "modifier": '<input type="button" id="ValidModif" value="Valider">'
-}
-    )
-    row.draw();
-});
+            let nom = $("#nomModif").val();
+            let email = $("#emailModif").val();
+            let id = $("#idModif").val();
 
-table.on('click', '#Suppr', function (e) {
-    let row = table.row(e.target.closest('tr'));
-    row.remove().draw();
-});
+            let firstColumnData = table.column(0).data().toArray();
+            let row = table.row(0);
 
+            for (let i = 0; i < firstColumnData.length; i++) {
+                let value = firstColumnData[i];
+                if (value == id) {
+                    row = table.row(i);
+                    break;
+                }
+            }
+
+            row.data(
+                {
+                    "id": table.cell(row, 0).data(),
+                    "nom": nom,
+                    "email": email
+                }
+            )
+            row.draw();
+            fermeModal();
+        });
+
+
+        //Permet de gérer la suppression
+        table.on('click', '#Suppr', function (e) {
+            let row = table.row(e.target.closest('tr'));
+            row.remove().draw();
+        });
+
+
+        //Permet de gérer l'ajout
         function onFormSubmit() {
             // prevent the form to be sent to the server
             event.preventDefault();
             let nom = $("#inputNom").val();
             let email = $("#inputEmail").val();
-            let id = $("#inputId").val();
+
+            var formData = {
+                name: nom,
+                email: email
+            }
+
             if (nom.length != 0) {
-                table.row.add({
-        "id":       id,
-        "nom":   nom,
-        "email":     email
-    }).draw();
+                $.ajax({
+                    url: 'http://localhost/IDAW/TP4/exo5/users.php',
+                    method: 'POST',
+                    data: JSON.stringify(formData),
+                    dataType: 'json',
+                    success: function (data) {
+                        table.row.add({
+                            "id": data,
+                            "nom": formData.name,
+                            "email": formData.email
+                        }).draw();
+                    },
+                    error: function (error) {
+                        console.error('Erreur lors de la récupération des données:', error);
+                    }
+                })
             }
             else {
                 $("#inputNom").css("border-color", "red")
